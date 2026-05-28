@@ -1,0 +1,22 @@
+{
+	"version": 9,
+	"cmakeMinimumRequired": {
+		"major": 3, "minor": 30, "patch": 0
+	},
+	"configurePresets": [
+		{
+			"name" : "win32",
+			"displayName": "win32 cmake config",
+			"binaryDir":"${sourceDir}/build/win32_vscode",
+			"hidden" : true
+		},
+		{
+			"name": "desktop_win32",
+			"displayName": "standart win32",
+			"inherits": ["win32"]
+		}
+	],
+	"buildPresets": [
+		{ "name" : "debug_win32", "displayName": "win32 debug", "configurePreset" : "desktop_win32", "configuration": "Debug" }
+	]
+}
